@@ -1,0 +1,1 @@
+initSidebarItems({"fn":[["cargo_toml_to_md",""],["utc_now","utc now"]],"struct":[["REGEX_AUTHORS",""],["REGEX_DESCRIPTION",""],["REGEX_MD_END",""],["REGEX_MD_START",""],["REGEX_REMOVE_EMAIL",""],["REGEX_VERSION",""]]});

@@ -1,5 +1,51 @@
-// region: lmake_readme include "readme.md" //! A
-// endregion: lmake_readme include "example.md" //! A
+// region: lmake_md_to_doc_comments include README.md A //!
+//! # lmake_cargo_toml_to_md
+//!
+//! ***version: 0.5.4  date: 2020-07-15 authors: Luciano Bestia***  
+//! **Includes cargo.toml data into md.**
+//!
+//! [![Lines in Rust code](https://img.shields.io/badge/Lines_in_Rust-108-green.svg)](https://github.com/LucianoBestia/lmake_cargo_toml_to_md/)
+//! [![Lines in Doc comments](https://img.shields.io/badge/Lines_in_Doc_comments-81-blue.svg)](https://github.com/LucianoBestia/lmake_cargo_toml_to_md/)
+//! [![Lines in Comments](https://img.shields.io/badge/Lines_in_comments-13-purple.svg)](https://github.com/LucianoBestia/lmake_cargo_toml_to_md/)
+//! [![Lines in examples](https://img.shields.io/badge/Lines_in_examples-0-yellow.svg)](https://github.com/LucianoBestia/lmake_cargo_toml_to_md/)
+//! [![Lines in tests](https://img.shields.io/badge/Lines_in_tests-0-orange.svg)](https://github.com/LucianoBestia/lmake_cargo_toml_to_md/)
+//!
+//! Includes data from cargo.toml to md files.  
+//! To avoid out of sync data like version, authors and description.  
+//! The `lmake_cargo_toml_to_md` binary must be executed in the project root folder where is the cargo.toml file.  
+//! It works only for single projects and not for workspaces.  
+//!
+//! ## include cargo.toml data into md file
+//!
+//! In the md file write these markers:  
+//!
+//! ```markdown
+//! 1 [comment]: # (lmake_cargo_toml_to_md start)
+//! 2 [comment]: # (lmake_cargo_toml_to_md end)
+//! ```
+//!
+//! lmake_cargo_toml_to_md deletes the old lines between the markers  
+//! and includes the date and the cargo.toml data:  
+//! version, authors, description.  
+//!
+//! ## Tasks in Makefile.toml  
+//!
+//! I use `cargo make` to script the repetitive commands sequences.  
+//! <https://github.com/sagiegurari/cargo-make>  
+//! In `Makefile.toml` add a task like this:  
+//!
+//! ```toml
+//! [tasks.doc]
+//! description = "create docs from doc comments"
+//! clear = true
+//! script = [
+//!     "lmake_cargo_toml_to_md",
+//!     "cargo doc --no-deps --document-private-items",
+//!     "\\rsync -avz --delete-after target/doc/*  docs/",
+//! ]
+//! ```
+//!
+// endregion: lmake_md_to_doc_comments include README.md A //!
 
 #[allow(unused_imports)]
 use ansi_term::Colour::{Green, Red, Yellow};

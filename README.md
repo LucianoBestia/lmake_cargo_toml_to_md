@@ -10,6 +10,11 @@
 [comment]: # (lmake_cargo_toml_to_md end)
 
 [comment]: # (lmake_lines_of_code start)
+[![Lines in Rust code](https://img.shields.io/badge/Lines_in_Rust-108-green.svg)](https://github.com/LucianoBestia/lmake_cargo_toml_to_md/)
+[![Lines in Doc comments](https://img.shields.io/badge/Lines_in_Doc_comments-81-blue.svg)](https://github.com/LucianoBestia/lmake_cargo_toml_to_md/)
+[![Lines in Comments](https://img.shields.io/badge/Lines_in_comments-13-purple.svg)](https://github.com/LucianoBestia/lmake_cargo_toml_to_md/)
+[![Lines in examples](https://img.shields.io/badge/Lines_in_examples-0-yellow.svg)](https://github.com/LucianoBestia/lmake_cargo_toml_to_md/)
+[![Lines in tests](https://img.shields.io/badge/Lines_in_tests-0-orange.svg)](https://github.com/LucianoBestia/lmake_cargo_toml_to_md/)
 
 [comment]: # (lmake_lines_of_code end)
 
@@ -50,6 +55,8 @@ script = [
 
 [comment]: # (lmake_md_to_doc_comments segment end A)
 
+[comment]: # (lmake_md_to_doc_comments segment start B)
+
 ## install
 
 Install from crates.io:  
@@ -63,6 +70,8 @@ Documentation:
 <https://lucianobestia.github.io/lmake_cargo_toml_to_md/>  
 List of prepared make tasks for development: build, run, doc, publish,...  
 `clear; cargo make`  
+
+[comment]: # (lmake_md_to_doc_comments segment end B)
 
 ## cargo crev reviews and advisory
 
