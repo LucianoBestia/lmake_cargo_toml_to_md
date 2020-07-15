@@ -18,6 +18,10 @@
 
 [comment]: # (lmake_lines_of_code end)
 
+[![crates.io](https://meritbadge.herokuapp.com/lmake_cargo_toml_to_md)](https://crates.io/crates/lmake_cargo_toml_to_md) [![Documentation](https://docs.rs/lmake_cargo_toml_to_md/badge.svg)](https://docs.rs/lmake_cargo_toml_to_md/) [![crev reviews](
+https://web.crev.dev/rust-reviews/badge/crev_count/lmake_cargo_toml_to_md.svg
+)](https://web.crev.dev/rust-reviews/crate/lmake_cargo_toml_to_md/) [![Lib.rs](https://img.shields.io/badge/Lib.rs-rust-orange.svg)](https://lib.rs/crates/lmake_cargo_toml_to_md/) [![Licence](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/LucianoBestia/reader_for_microxml/blob/master/LICENSE)
+
 Includes data from cargo.toml to md files.  
 To avoid out of sync data like version, authors and description.  
 The `lmake_cargo_toml_to_md` binary must be executed in the project root folder where is the cargo.toml file.  
