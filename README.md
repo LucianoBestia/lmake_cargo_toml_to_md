@@ -52,6 +52,7 @@ description = "create docs from doc comments"
 clear = true
 script = [
     "lmake_cargo_toml_to_md",
+    "lmake_md_to_doc_comments",
     "cargo doc --no-deps --document-private-items",
     "\\rsync -avz --delete-after target/doc/*  docs/",
 ]
