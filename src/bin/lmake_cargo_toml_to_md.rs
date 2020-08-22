@@ -1,14 +1,18 @@
 // region: lmake_md_to_doc_comments include README.md A //!
 //! # lmake_cargo_toml_to_md
 //!
-//! ***version: 0.5.4  date: 2020-07-15 authors: Luciano Bestia***  
-//! **Includes cargo.toml data into md.**
+//! ***version: 0.5.5  date: 2020-08-22 authors: Luciano Bestia***  
+//! **Includes Cargo.toml data into md.**
 //!
 //! [![Lines in Rust code](https://img.shields.io/badge/Lines_in_Rust-108-green.svg)](https://github.com/LucianoBestia/lmake_cargo_toml_to_md/)
-//! [![Lines in Doc comments](https://img.shields.io/badge/Lines_in_Doc_comments-81-blue.svg)](https://github.com/LucianoBestia/lmake_cargo_toml_to_md/)
+//! [![Lines in Doc comments](https://img.shields.io/badge/Lines_in_Doc_comments-119-blue.svg)](https://github.com/LucianoBestia/lmake_cargo_toml_to_md/)
 //! [![Lines in Comments](https://img.shields.io/badge/Lines_in_comments-13-purple.svg)](https://github.com/LucianoBestia/lmake_cargo_toml_to_md/)
 //! [![Lines in examples](https://img.shields.io/badge/Lines_in_examples-0-yellow.svg)](https://github.com/LucianoBestia/lmake_cargo_toml_to_md/)
 //! [![Lines in tests](https://img.shields.io/badge/Lines_in_tests-0-orange.svg)](https://github.com/LucianoBestia/lmake_cargo_toml_to_md/)
+//!
+//! [![crates.io](https://meritbadge.herokuapp.com/lmake_cargo_toml_to_md)](https://crates.io/crates/lmake_cargo_toml_to_md) [![Documentation](https://docs.rs/lmake_cargo_toml_to_md/badge.svg)](https://docs.rs/lmake_cargo_toml_to_md/) [![crev reviews](
+//! https://web.crev.dev/rust-reviews/badge/crev_count/lmake_cargo_toml_to_md.svg
+//! )](https://web.crev.dev/rust-reviews/crate/lmake_cargo_toml_to_md/) [![Lib.rs](https://img.shields.io/badge/Lib.rs-rust-orange.svg)](https://lib.rs/crates/lmake_cargo_toml_to_md/) [![Licence](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/LucianoBestia/lmake_cargo_toml_to_md/blob/master/LICENSE)
 //!
 //! Includes data from cargo.toml to md files.  
 //! To avoid out of sync data like version, authors and description.  
@@ -40,6 +44,7 @@
 //! clear = true
 //! script = [
 //!     "lmake_cargo_toml_to_md",
+//!     "lmake_md_to_doc_comments",
 //!     "cargo doc --no-deps --document-private-items",
 //!     "\\rsync -avz --delete-after target/doc/*  docs/",
 //! ]
@@ -60,7 +65,7 @@
 //! Documentation:  
 //! <https://lucianobestia.github.io/lmake_cargo_toml_to_md/>  
 //! List of prepared make tasks for development: build, run, doc, publish,...  
-//! `clear; cargo make`  
+//! `cargo make`  
 //!
 // endregion: lmake_md_to_doc_comments include README.md B //!
 
