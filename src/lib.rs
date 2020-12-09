@@ -72,7 +72,9 @@ lazy_static! {
 lazy_static! {
     static ref REGEX_AUTHORS: Regex = unwrap!(Regex::new(r#"(?m)^authors = \["(.+?)"\]$"#));
 }
-
+lazy_static! {
+    static ref REGEX_REPOSITORY: Regex = unwrap!(Regex::new(r#"(?m)^repository = "(.+?)"$"#));
+}
 lazy_static! {
     static ref REGEX_DESCRIPTION: Regex = unwrap!(Regex::new(r#"(?m)^description = "(.+?)"$"#));
 }
@@ -92,15 +94,18 @@ pub fn cargo_toml_to_md() {
     let cap = unwrap!(REGEX_AUTHORS.captures(&cargo_toml_text));
     let authors = cap.get(1).unwrap().as_str();
     let authors = REGEX_REMOVE_EMAIL.replace_all(authors, "");
+    let cap = unwrap!(REGEX_REPOSITORY.captures(&cargo_toml_text));
+    let repository = cap.get(1).unwrap().as_str();
     let cap = unwrap!(REGEX_DESCRIPTION.captures(&cargo_toml_text));
     let description = cap.get(1).unwrap().as_str();
 
     let new_text = format!(
-        "\n***version: {}  date: {} authors: {}***  \n**{}**\n\n",
+        "\n**{}**  \n***[repo]({}); version: {}  date: {} authors: {}***  \n\n",
+        description,
+        repository,
         version,
         &utc_now(),
         authors,
-        description,
     );
     println!("new text: '{}'", Green.paint(&new_text));
 

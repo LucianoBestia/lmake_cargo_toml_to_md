@@ -4,8 +4,8 @@
 
 [comment]: # (lmake_cargo_toml_to_md start)
 
-***version: 0.5.5  date: 2020-08-22 authors: Luciano Bestia***  
-**Includes Cargo.toml data into md.**
+**Includes Cargo.toml data into md.**  
+***[repo](https://github.com/LucianoBestia/lmake_cargo_toml_to_md); version: 2020.1209.1041  date: 2020-12-09 authors: Luciano Bestia***  
 
 [comment]: # (lmake_cargo_toml_to_md end)
 
@@ -38,7 +38,7 @@ In the md file write these markers:
 
 lmake_cargo_toml_to_md deletes the old lines between the markers  
 and includes the date and the cargo.toml data:  
-version, authors, description.  
+version, authors, repository and description.  
 
 ## Tasks in Makefile.toml  
 
