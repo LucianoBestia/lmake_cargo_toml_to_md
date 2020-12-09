@@ -221,6 +221,8 @@ script = [
     # cargo publish
     "echo $ cargo publish",
     "cargo publish",
+    "echo use this command to install new version from crates.io:",
+    "echo $ cargo install ${CARGO_MAKE_CRATE_NAME}"
 ]
 
 # end of crates.io publish script
