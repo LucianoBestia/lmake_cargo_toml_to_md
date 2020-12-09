@@ -8,6 +8,7 @@ skip_core_tasks = true
 description = "help for prepared make tasks"
 clear = true
 script= [
+"clear",
 "echo ",
 "echo ORDER OF EXECUTING MAKE TASKS:",
 "echo ",

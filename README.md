@@ -5,7 +5,7 @@
 [comment]: # (lmake_cargo_toml_to_md start)
 
 **Includes Cargo.toml data into md.**  
-***[repo](https://github.com/LucianoBestia/lmake_cargo_toml_to_md); version: 2020.1209.1041  date: 2020-12-09 authors: Luciano Bestia***  
+***[repo](https://github.com/LucianoBestia/lmake_cargo_toml_to_md); version: 2020.1209.1044  date: 2020-12-09 authors: Luciano Bestia***  
 
 [comment]: # (lmake_cargo_toml_to_md end)
 
